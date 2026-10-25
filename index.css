@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-pink: #ff85a2;
+  --soft-pink: #ffd0dc;
+  --blush: #ffe8ee;
+  --cream: #fff9f6;
+  --lavender: #e9d5ff;
+  --peach: #fed7aa;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background-color: #fff5f7;
+  color: #4a4046;
+  transition: background-color 0.5s ease;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(255, 140, 175, 0.15), 0 4px 10px -2px rgba(255, 182, 193, 0.1);
+}
+
+.glass-card-darker {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 15px 35px -5px rgba(255, 120, 160, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fff0f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffb3c6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8fab;
+}
+
+/* Polaroid Card Effect */
+.polaroid-card {
+  background: #ffffff;
+  padding: 12px 12px 28px 12px;
+  box-shadow: 0 8px 24px rgba(230, 100, 140, 0.15), 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate(0deg) !important;
+  box-shadow: 0 16px 36px rgba(230, 80, 130, 0.28), 0 4px 10px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+/* Polaroid Washi Tape Accent */
+.washi-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 24px;
+  background: rgba(255, 215, 225, 0.85);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-left: 3px dashed rgba(255, 255, 255, 0.5);
+  border-right: 3px dashed rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+/* Glowing text */
+.glow-text {
+  text-shadow: 0 0 12px rgba(255, 105, 180, 0.4), 0 0 24px rgba(255, 182, 193, 0.3);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
